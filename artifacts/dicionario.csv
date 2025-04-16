@@ -1,0 +1,53 @@
+tabela,coluna,descricao_coluna,tipo_coluna
+customers,customer_id,key to the orders dataset. Each order has a unique customer_id.,Text
+customers,customer_unique_id,unique identifier of a customer.,Text
+customers,customer_zip_code_prefix,first five digits of customer zip code,Integer
+customers,customer_city,customer city name,Text
+customers,customer_state,customer state,Text
+geolocation,geolocation_zip_code_prefix,first 5 digits of zip code,Integer
+geolocation,geolocation_lat,latitude,Float
+geolocation,geolocation_lng,longitude,Float
+geolocation,geolocation_city,city name,Text
+geolocation,geolocation_state,state,Text
+order_items,order_id,order unique identifier,Text
+order_items,order_item_id,sequential number identifying number of items included in the same order.,Text
+order_items,product_id,product unique identifier,Text
+order_items,seller_id,seller unique identifier,Text
+order_items,shipping_limit_date,Shows the seller shipping limit date for handling the order over to the logistic partner.,Date
+order_items,price,item price,Float
+order_items,freight_value,item freight value item (if an order has more than one item the freight value is splitted between items),Float
+order_payments,order_id,unique identifier of an order.,Text
+order_payments,payment_sequential,"a customer may pay an order with more than one payment method. If he does so, a sequence will be created to accommodate all payments.",Integer
+order_payments,payment_type,method of payment chosen by the customer.,Text
+order_payments,payment_installments,number of installments chosen by the customer.,Integer
+order_payments,payment_value,transaction value.,Float
+order_reviews,review_id,unique review identifier,Text
+order_reviews,order_id,unique order identifier,Text
+order_reviews,review_score,Note ranging from 1 to 5 given by the customer on a satisfaction survey.,Integer
+order_reviews,review_comment_title,"Comment title from the review left by the customer, in Portuguese.",Text
+order_reviews,review_comment_message,"Comment message from the review left by the customer, in Portuguese.",Text
+order_reviews,review_creation_date,Shows the date in which the satisfaction survey was sent to the customer.,Date
+order_reviews,review_answer_timestamp,Shows satisfaction survey answer timestamp.,Date
+orders,order_id,unique identifier of the order.,Text
+orders,customer_id,key to the customer dataset. Each order has a unique customer_id.,Text
+orders,order_status,"Reference to the order status (delivered, shipped, etc).",Text
+orders,order_purchase_timestamp,Shows the purchase timestamp.,Date
+orders,order_approved_at,Shows the payment approval timestamp.,Date
+orders,order_delivered_carrier_date,Shows the order posting timestamp. When it was handled to the logistic partner.,Date
+orders,order_delivered_customer_date,Shows the actual order delivery date to the customer.,Date
+orders,order_estimated_delivery_date,Shows the estimated delivery date that was informed to customer at the purchase moment.,Date
+products,product_id,unique product identifier,Text
+products,product_category_name,"root category of product, in Portuguese.",Text
+products,product_name_lenght,number of characters extracted from the product name.,Integer
+products,product_description_lenght,number of characters extracted from the product description.,Integer
+products,product_photos_qty,number of product published photos,Integer
+products,product_weight_g,product weight measured in grams.,Integer
+products,product_length_cm,product length measured in centimeters.,Integer
+products,product_height_cm,product height measured in centimeters.,Integer
+products,product_width_cm,product width measured in centimeters.,Integer
+sellers,seller_id,seller unique identifier,Text
+sellers,seller_zip_code_prefix,first 5 digits of seller zip code,Integer
+sellers,seller_city,seller city name,Text
+sellers,seller_state,seller state,Text
+product_category_name_translation,product_category_name,category name in Portuguese,Text
+product_category_name_translation,product_category_name_english,category name in English,Text
